@@ -1,0 +1,26 @@
+header{
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.header-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
