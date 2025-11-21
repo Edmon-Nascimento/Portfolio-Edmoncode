@@ -64,12 +64,20 @@ body{
 }
 
 #sobre-txt{
-    margin-top: 100px;
-    text-align: center;
+    margin-top: 50px;
+    text-align: justify;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+}
+
+#sobre-txt article{
+    max-width: 1000px;
+}
+
+#sobre-txt p{
+    margin-top: 10px;
 }
 
 section h2{
@@ -94,6 +102,7 @@ section h2{
 
 .container-habilidades{
     display: flex;
+    flex-flow: row wrap;
     gap: 50px;
     margin-top: 20px;
 }
