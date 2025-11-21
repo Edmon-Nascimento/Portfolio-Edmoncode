@@ -7,6 +7,7 @@ import envelope from './assets/icons/envelope-solid-full.svg'
 import whatsapp from './assets/icons/whatsapp-brands-solid-full.svg'
 import linkedin from './assets/icons/linkedin-brands-solid-full.svg'
 import github from './assets/icons/github-brands-solid-full.svg'
+import profile from './assets/images/profile.jpg'
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
               Download CV
             </a>
           </div>
+          <img src={profile} alt="Edmon Nascimento" />
         </section>
 
         <section id="sobre-txt">
