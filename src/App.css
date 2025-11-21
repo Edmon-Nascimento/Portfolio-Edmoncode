@@ -8,13 +8,22 @@
 }
 
 body{
-    width: 100vw;
+    width: 100%;
+    min-height: 100vh;
     background-color: #1c1b2a;
     background-image: linear-gradient(to bottom, #1c1b2a, #2a2840);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
@@ -200,6 +209,8 @@ section {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
 }
 
 #sobre-txt h2 {
@@ -517,17 +528,34 @@ section#projetos h2 {
     width: 500px;
     background: url('assets/images/wedding-bg.jpeg');
     background-position: center;
+    background-size: cover;
 }
 
 .primeflix{
     width: 500px;
     background: url('assets/images/primeflix-bg.jpeg');
     background-position: top;
+    background-size: cover;
+}
+
+@media (max-width: 1100px) {
+    .wedding,
+    .primeflix {
+        width: 450px;
+    }
+}
+
+@media (max-width: 968px) {
+    .wedding,
+    .primeflix {
+        width: 400px;
+    }
 }
 
 @media (max-width: 768px) {
     .container-projetos {
         gap: 30px;
+        padding: 0 20px;
     }
     
     .container-projetos div {
@@ -537,11 +565,22 @@ section#projetos h2 {
     .wedding,
     .primeflix {
         width: 100%;
-        max-width: 400px;
+        min-width: 280px;
+        max-width: 500px;
     }
     
     .container-projetos div p {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-projetos div {
+        height: 280px;
+    }
+    
+    .container-projetos div p {
+        font-size: 16px;
     }
 }
 
@@ -552,6 +591,8 @@ section#contatos{
     align-items: center;
     justify-content: center;
     padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
 }
 
 section#contatos h2 {
@@ -652,15 +693,21 @@ section#contatos h2 {
 @media (max-width: 768px) {
     .container-contatos {
         gap: 20px;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
     
     .container-contatos a {
-        min-width: 150px;
-        max-width: 200px;
+        width: 100%;
+        max-width: 300px;
+        flex: none;
     }
     
     .container-contatos div {
-        padding: 25px 15px;
+        padding: 25px 20px;
+        width: 100%;
     }
     
     .container-contatos div img {
@@ -670,5 +717,19 @@ section#contatos h2 {
     
     .container-contatos div p {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-contatos {
+        gap: 15px;
+    }
+    
+    .container-contatos a {
+        max-width: 280px;
+    }
+    
+    .container-contatos div {
+        padding: 20px 15px;
     }
 }
