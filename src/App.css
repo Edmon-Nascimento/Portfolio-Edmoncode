@@ -34,8 +34,11 @@ body{
     font-size: 18px;
 }
 
-#sobre button{
-    background-image: linear-gradient(to bottom, #7FF7FF, #2188A8);
+#sobre a{
+    background: #7ff6ffb6;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -47,16 +50,11 @@ body{
     font-size: 15px;
 }
 
-#sobre button:hover{
-    cursor: pointer;
+#sobre a:hover{
     transform: scale(1.03);
-    background-image: none;
-    background-color: #7ff7ff;
+    background: #7FF7FF;
 }
 
-#sobre a{
-    text-decoration: none;
-}
 
 #sobre img{
     width: 400px;
@@ -106,13 +104,13 @@ section h2{
     padding: 10px 20px;
     border-bottom: 3px solid #7ff7ff;
     border-radius: 5px 5px 0 0;
-    box-shadow: 3px 0 3px rgba(127, 246, 255, 0.2);
+    box-shadow: 5px 0 10px rgba(127, 246, 255, 0.2);
     text-align: center;
     transition: transform .3s ease;
 }
 
 .container-habilidades div:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .container-habilidades div img{
@@ -140,6 +138,14 @@ section#projetos{
     height: 400px;
     background-size: cover;
     border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(127, 246, 255, 0.2);
+    opacity: 70%;
+    transition: all .3s ease;
+}
+
+.container-projetos div:hover{
+    opacity: 100%;
+    transform: scale(1.03);
 }
 
 .wedding{

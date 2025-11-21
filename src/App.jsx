@@ -24,7 +24,9 @@ function App() {
           <div className='profile'>
             <p className="name">Edmon Nascimento</p>
             <span>Desenvolvedor front-end | React | Typescript</span>
-            <a href=""><button>Baixar CV</button></a>
+            <a href="./assets/doc/Currículo Edmon Nascimento.pdf" download class="btn-cv">
+              Download CV
+            </a>
           </div>
 
           <img src="" alt="" />
