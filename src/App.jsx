@@ -7,6 +7,10 @@ import css3Icon from './assets/icons/css3-brands-solid-full.svg';
 import html5Icon from './assets/icons/html5-brands-solid-full.svg';
 import jsIcon from './assets/icons/js-brands-solid-full.svg';
 import reactIcon from './assets/icons/react-brands-solid-full.svg';
+import envelope from './assets/icons/envelope-solid-full.svg'
+import whatsapp from './assets/icons/whatsapp-brands-solid-full.svg'
+import linkedin from './assets/icons/linkedin-brands-solid-full.svg'
+import github from './assets/icons/github-brands-solid-full.svg'
 
 function App() {
 
@@ -41,7 +45,7 @@ function App() {
         <section id='habilidades'>
           <h2>Habilidades</h2>
 
-          <div className='stacks'>
+          <div className='container-habilidades'>
             <div>
               <p>HTML5</p>
               <img src={html5Icon} alt="HTML5" />
@@ -73,6 +77,58 @@ function App() {
             </div>
 
           </div>
+        </section>
+
+        <section id='projetos'>
+          <h2>Projetos</h2>
+          <div className='container-projetos'>
+            <a href="https://wedding-attendance-form.vercel.app/" target='_blank'>
+              <div className='wedding'>
+                <p>Wedding attendance form</p>
+              </div>
+            </a>
+
+            <a href="https://primeflix-project.vercel.app/" target='_blank'>
+              <div className='primeflix'>
+                <p>Primeflix</p>
+              </div>
+            </a>
+            
+          </div>
+        </section>
+
+        <section id='contatos'>
+          <h2>Contatos</h2>
+          <div className='container-contatos'>
+            <a href="https://api.whatsapp.com/send?phone=5521968892704" target="_blank">
+              <div>
+                <img src={whatsapp} alt="" />
+                <p>(71) 92003-0489</p>
+              </div>
+            </a>
+
+            <a href="mailto:edmoncode7@gmail.com" target="_blank">
+              <div>
+                <img src={envelope} alt="" />
+                <p>edmoncode7@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/edmon-nascimento/" target="_blank">
+              <div>
+                <img src={linkedin} alt="" />
+                <p>in/edmon-nascimento/</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/Edmon-Nascimento" target="_blank">
+              <div>
+                <img src={github} alt="" />
+                <p>Edmon-Nascimento</p>
+              </div>
+            </a>
+          </div>
+          
         </section>
       </main>
       <Footer/>

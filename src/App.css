@@ -94,28 +94,107 @@ section h2{
     justify-content: center;
 }
 
-.stacks{
+.container-habilidades{
     display: flex;
     gap: 50px;
     margin-top: 20px;
 }
 
-.stacks div{
+.container-habilidades div{
     color: #7ff7ff;
-    background-color: #1c1b2a;
+    background-color: #1c1b2a80;
     padding: 10px 20px;
     border-bottom: 3px solid #7ff7ff;
     border-radius: 5px 5px 0 0;
-    box-shadow: 3px 0 3px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 0 3px rgba(127, 246, 255, 0.2);
     text-align: center;
     transition: transform .3s ease;
 }
 
-.stacks div:hover{
+.container-habilidades div:hover{
     transform: scale(1.1);
 }
 
-.stacks div img{
+.container-habilidades div img{
     background-color: none;
     width: 50px;
+}
+
+section#projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    flex-flow: column;
+}
+
+.container-projetos{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.container-projetos div{
+    height: 400px;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.wedding{
+    width: 500px;
+    background: url('assets/images/wedding-bg.jpeg');
+    background-position: center;
+}
+
+.primeflix{
+    width: 500px;
+    background: url('assets/images/primeflix-bg.jpeg');
+    background-position: top;
+}
+
+section#contatos{
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-contatos{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.container-contatos a{
+    text-decoration: none;
+    text-align: center;
+    color: #bebebe;
+
+}
+
+.container-contatos div{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1b2a80;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform .3s ease;
+}
+
+.container-contatos div:hover{
+    transform: scale(1.1);
+}
+
+
+.container-contatos div img{
+    width: 60px;
+    height: 60px;
 }
