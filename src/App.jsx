@@ -15,7 +15,7 @@ function App() {
       <Header/>
       <main>
 
-        <section id='home'>
+        <section id='sobre'>
 
           <div className='profile'>
             <p className="name">Edmon Nascimento</p>
@@ -27,7 +27,7 @@ function App() {
 
         </section>
 
-        <section id='sobre'>
+        <section id='sobre-txt'>
           <h2>Sobre mim</h2>
           <p>
             Sou um desenvolvedor Front-end apaixonado por criar interfaces modernas, responsivas e bem estruturadas. Trabalho com HTML, CSS, JavaScript, React, TypeScript e Firebase, sempre buscando escrever código limpo e construir experiências agradáveis e funcionais.
