@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -10,7 +11,8 @@ import github from './assets/icons/github-brands-solid-full.svg'
 
 
 function App() {
-  
+  const [isContactsVisible, setIsContactsVisible] = useState(false)
+  const contactsRef = useRef(null)
 
   const contacts = [
     { href: 'https://api.whatsapp.com/send?phone=5521968892704', img: whatsapp, text: '(71) 92003-0489' },
@@ -18,6 +20,29 @@ function App() {
     { href: 'https://www.linkedin.com/in/edmon-nascimento/', img: linkedin, text: 'in/edmon-nascimento/' },
     { href: 'https://github.com/Edmon-Nascimento', img: github, text: 'Edmon-Nascimento' }
   ]
+
+  useEffect(() => {
+    const currentSection = contactsRef.current
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsContactsVisible(entry.isIntersecting)
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px 0px -50px 0px'
+      }
+    )
+
+    if (currentSection) {
+      observer.observe(currentSection)
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection)
+      }
+    }
+  }, [])
 
   return (
     <>
@@ -62,9 +87,9 @@ function App() {
 
         <Projects />
 
-        <section id="contatos">
+        <section id="contatos" ref={contactsRef} className={`animate-section ${isContactsVisible ? 'visible' : ''}`}>
           <h2>Contatos</h2>
-          <div className="container-contatos">
+          <div className={`container-contatos animate-items ${isContactsVisible ? 'visible' : ''}`}>
             {contacts.map((c) => (
               <a key={c.text} href={c.href} target="_blank" rel="noopener noreferrer">
                 <div>
