@@ -8,7 +8,7 @@ import envelope from './assets/icons/envelope-solid-full.svg'
 import whatsapp from './assets/icons/whatsapp-brands-solid-full.svg'
 import linkedin from './assets/icons/linkedin-brands-solid-full.svg'
 import github from './assets/icons/github-brands-solid-full.svg'
-
+import profilepic from './assets/images/profile.png'
 
 function App() {
   const [isContactsVisible, setIsContactsVisible] = useState(false)
@@ -56,7 +56,7 @@ function App() {
               Download CV
             </a>
           </div>
-          <img src="" alt="Edmon Nascimento" />
+          <img src={profilepic} alt="Edmon Nascimento" />
         </section>
 
         <section id="sobre-txt">
