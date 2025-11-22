@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Modal from '../Modal'
+import weddingBg from '../../assets/images/wedding-bg.jpeg'
+import primeflixBg from '../../assets/images/primeflix-bg.jpeg'
 
 function Projects() {
   const [isVisible, setIsVisible] = useState(false)
@@ -11,7 +13,7 @@ function Projects() {
     { 
       title: 'Wedding Attendance Form', 
       url: 'https://wedding-attendance-form.vercel.app/', 
-      background: 'url(/src/assets/images/wedding-bg.jpeg)',
+      background: `url(${weddingBg})`,
       backgroundPosition: 'center',
       description: 'Este projeto é um formulário de confirmação de presença para o meu casamento, no qual os convidados podem registrar sua participação. É um projeto muito especial para mim, porque é o meu primeiro projeto pessoal. Eu o criei por necessidade, já que não encontrei nenhum modelo gratuito que realmente atendesse às minhas necessidades. Além disso, ele é para um dos momentos mais importantes da minha vida — O MEU CASAMENTO!',
       repository: 'https://github.com/Edmon-Nascimento/Wedding-Attendance-Form',
@@ -20,7 +22,7 @@ function Projects() {
     { 
       title: 'Primeflix', 
       url: 'https://primeflix-project.vercel.app/', 
-      background: 'url(/src/assets/images/primeflix-bg.jpeg)',
+      background: `url(${primeflixBg})`,
       backgroundPosition: 'top',
       description: 'PrimeFlix é uma aplicação web moderna que permite aos usuários explorar filmes utilizando a API do The Movie Database (TMDB). Com ela, é possível navegar pelos lançamentos mais recentes, assistir aos trailers por meio de links do YouTube e salvar seus títulos favoritos para ver mais tarde.',
       repository: 'https://github.com/Edmon-Nascimento/Primeflix-project',
