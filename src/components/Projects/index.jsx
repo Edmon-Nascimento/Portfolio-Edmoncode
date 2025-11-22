@@ -75,7 +75,6 @@ function Projects() {
               style={{ cursor: 'pointer' }}
             >
               <div 
-                className={p.className}
                 style={{ 
                   backgroundImage: p.background,
                   backgroundPosition: p.backgroundPosition || 'center'
