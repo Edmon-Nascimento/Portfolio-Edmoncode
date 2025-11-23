@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
 }
 
-body{
+html, body{
     width: 100%;
     min-height: 100vh;
     background-color: #1c1b2a;
