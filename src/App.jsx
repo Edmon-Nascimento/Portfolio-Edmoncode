@@ -15,7 +15,7 @@ function App() {
   const contactsRef = useRef(null)
 
   const contacts = [
-    { href: 'https://api.whatsapp.com/send?phone=5521968892704', img: whatsapp, text: '(71) 92003-0489' },
+    { href: 'https://api.whatsapp.com/send?phone=5571920030489', img: whatsapp, text: '(71) 92003-0489' },
     { href: 'mailto:edmoncode7@gmail.com', img: envelope, text: 'edmoncode7@gmail.com' },
     { href: 'https://www.linkedin.com/in/edmon-nascimento/', img: linkedin, text: 'in/edmon-nascimento/' },
     { href: 'https://github.com/Edmon-Nascimento', img: github, text: 'Edmon-Nascimento' }
