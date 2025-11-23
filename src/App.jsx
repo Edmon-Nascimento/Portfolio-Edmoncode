@@ -9,6 +9,7 @@ import whatsapp from './assets/icons/whatsapp-brands-solid-full.svg'
 import linkedin from './assets/icons/linkedin-brands-solid-full.svg'
 import github from './assets/icons/github-brands-solid-full.svg'
 import profilepic from './assets/images/profile.png'
+import curriculo from './assets/doc/Currículo Edmon Nascimento.pdf'
 
 function App() {
   const [isContactsVisible, setIsContactsVisible] = useState(false)
@@ -52,7 +53,7 @@ function App() {
           <div className="profile">
             <p className="name">Edmon Nascimento</p>
             <span>Desenvolvedor front-end | React | TypeScript</span>
-            <a href="./assets/doc/Currículo Edmon Nascimento.pdf" download className="btn-cv">
+            <a href={curriculo} download className="btn-cv">
               Download CV
             </a>
           </div>
