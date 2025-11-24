@@ -27,7 +27,7 @@ main {
 }
 
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 150px;
 }
 
 #sobre{
@@ -203,7 +203,7 @@ section {
 }
 
 #sobre-txt{
-    margin-top: 80px;
+    margin-top: 50px;
     text-align: justify;
     display: flex;
     flex-flow: column;
