@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import Modal from '../Modal'
 import weddingBg from '../../assets/images/wedding-bg.jpeg'
 import primeflixBg from '../../assets/images/primeflix-bg.jpeg'
+import gabrieladvocaciaBg from '../../assets/images/gabrieloliveiraadvocacia-bg.jpeg'
 
 function Projects() {
   const [isVisible, setIsVisible] = useState(false)
@@ -28,6 +29,16 @@ function Projects() {
       repository: 'https://github.com/Edmon-Nascimento/Primeflix-project',
       linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7383567626339328000/'
     },
+    { 
+      title: 'Gabriel Oliveira Advocacia e Consultoria Jurídica', 
+      url: 'https://advgabrieloliveira.com/', 
+      background: `url(${gabrieladvocaciaBg})`,
+      backgroundPosition: 'top',
+      description: 'pensado para transmitir credibilidade, clareza nas informações e uma navegação simples, alinhada aos objetivos do negócio. Esse trabalho marca um passo importante na minha trajetória profissional, unindo estratégia, design e funcionalidade.',
+      linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7406786303465304064/'
+    },
+
+    
   ]
 
   const handleProjectClick = (e, project) => {
