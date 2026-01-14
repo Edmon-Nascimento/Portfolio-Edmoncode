@@ -1,16 +1,34 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio website built with React and JavaScript. The project showcases personal information, technical skills, projects, and contact details, with smooth animations and a clean, responsive layout.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The portfolio is designed to present a front-end developer profile, including:
 
-## React Compiler
+- Personal introduction
+- Skills section
+- Projects section
+- Contact information with external links
+- Downloadable CV
+- Animated sections using the Intersection Observer API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive layout
+- Component-based architecture
+- Smooth scroll-based animations
+- Contact section animation triggered on visibility
+- External links to WhatsApp, email, LinkedIn, and GitHub
+- CV download functionality
+- Organized and maintainable code structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React
+- JavaScript
+- Vite
+- HTML5
+- CSS3
+- Intersection Observer API
+
