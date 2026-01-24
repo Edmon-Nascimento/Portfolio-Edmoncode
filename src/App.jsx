@@ -9,7 +9,7 @@ import whatsapp from './assets/icons/whatsapp-brands-solid-full.svg'
 import linkedin from './assets/icons/linkedin-brands-solid-full.svg'
 import github from './assets/icons/github-brands-solid-full.svg'
 import profilepic from './assets/images/profile.png'
-import curriculo from './assets/doc/Currículo Edmon Nascimento.pdf'
+import curriculo from './assets/doc/Currículo - Edmon Nascimento.pdf'
 
 function App() {
   const [isContactsVisible, setIsContactsVisible] = useState(false)
