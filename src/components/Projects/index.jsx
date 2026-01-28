@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Modal from '../Modal'
 import weddingBg from '../../assets/images/wedding-bg.jpeg'
-import primeflixBg from '../../assets/images/primeflix-bg.jpeg'
+import teladuplaBg from '../../assets/images/teladuplaBg.png'
 import gabrieladvocaciaBg from '../../assets/images/gabrieloliveiraadvocacia-bg.jpeg'
 
 function Projects() {
@@ -21,12 +21,12 @@ function Projects() {
       linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7301388244745687040/'
     },
     { 
-      title: 'Primeflix', 
-      url: 'https://primeflix-project.vercel.app/', 
-      background: `url(${primeflixBg})`,
+      title: 'TelaDupla', 
+      url: 'https://teladupla.vercel.app/', 
+      background: `url(${teladuplaBg})`,
       backgroundPosition: 'top',
-      description: 'PrimeFlix é uma aplicação web moderna que permite aos usuários explorar filmes utilizando a API do The Movie Database (TMDB). Com ela, é possível navegar pelos lançamentos mais recentes, assistir aos trailers por meio de links do YouTube e salvar seus títulos favoritos para ver mais tarde.',
-      repository: 'https://github.com/Edmon-Nascimento/Primeflix-project',
+      description: 'TelaDupla é uma aplicação web moderna que permite aos usuários explorar filmes utilizando a API do The Movie Database (TMDB). Com ela, é possível navegar pelos lançamentos mais recentes, assistir aos trailers por meio de links do YouTube e salvar seus títulos favoritos para ver mais tarde.',
+      repository: 'https://github.com/Edmon-Nascimento/TelaDupla-Project',
       linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7383567626339328000/'
     },
     { 
