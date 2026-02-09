@@ -1,0 +1,82 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.links{
+    display: none;
+}
+
+.logo{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.name span{
+    color: #fff;
+    text-decoration: dashed;
+}
+
+img.active{
+    visibility: visible;
+    width: 50px;
+}
+
+img.inactive{
+    visibility: hidden;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100dvh;
+    width: 100dvw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+.overlay.active{
+    display: block;
+}
+
+
+aside{
+    display: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50vw;
+    height: 100dvh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+}
+
+aside.active {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+aside.active img{
+    margin-top: 50px;
+    width: 50px;
+}
+
+aside.active a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+aside.active a:first-child{
+    margin-top: 100px;
+}
+
+
+
