@@ -1,8 +1,8 @@
 header{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 50px 0;
+    justify-content: space-between;
+    padding: 50px 30px;
 }
 
 .links{
@@ -17,6 +17,15 @@ header{
 .name span{
     color: #fff;
     text-decoration: dashed;
+}
+
+.hideName{
+    visibility: hidden;
+}
+
+.menuBtn{
+    background: none;
+    border: none;
 }
 
 img.active{
@@ -45,7 +54,7 @@ img.inactive{
 
 
 aside{
-    display: none;
+    visibility: hidden;
     background-color: rgba(255, 255, 255, 0.2);
     width: 50vw;
     height: 100dvh;
@@ -56,14 +65,15 @@ aside{
 }
 
 aside.active {
+    visibility: visible;
     display: flex;
     flex-flow: column;
     gap: 30px;
     padding-left: 20px;
 }
 
-aside.active img{
-    margin-top: 50px;
+aside.active .menuBtn{
+    margin-top: 60px;
     width: 50px;
 }
 
