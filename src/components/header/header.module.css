@@ -19,13 +19,20 @@ header{
     text-decoration: dashed;
 }
 
-.hideName{
-    visibility: hidden;
+.name{
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.name.hideName{
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
 }
 
 .menuBtn{
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 img.active{
@@ -44,49 +51,61 @@ img.inactive{
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
     z-index: 10;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .3s ease;
 }
 
 .overlay.active{
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
-
 aside{
-    visibility: hidden;
     background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+
     width: 50vw;
     height: 100dvh;
+
     position: fixed;
     right: 0;
     top: 0;
     z-index: 20;
+
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: transform .4s ease, opacity .3s ease;
 }
 
-aside.active {
-    visibility: visible;
+aside.active{
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+
     display: flex;
     flex-flow: column;
     gap: 30px;
     padding-left: 20px;
 }
 
-aside.active .menuBtn{
+aside .menuBtn{
     margin-top: 60px;
     width: 50px;
 }
 
-aside.active a{
+aside a{
     text-decoration: none;
     color: #fff;
     font-size: 1.5em;
     font-weight: bold;
 }
 
-aside.active a:first-child{
+aside a:first-child{
     margin-top: 100px;
 }
-
-
-
