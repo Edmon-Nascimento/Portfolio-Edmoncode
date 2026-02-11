@@ -9,14 +9,14 @@ header{
     display: none;
 }
 
-.logo{
+.name h1{
     color: #fff;
     font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
 .name span{
     color: #fff;
-    text-decoration: dashed;
 }
 
 .name{
@@ -65,7 +65,7 @@ img.inactive{
 }
 
 aside{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(127, 246, 255, 0.35);
     backdrop-filter: blur(10px);
 
     width: 50vw;
@@ -108,4 +108,71 @@ aside a{
 
 aside a:first-child{
     margin-top: 100px;
+}
+
+@media screen and (min-width:768px) {
+    header{
+        padding: 60px 100px;
+    }
+
+    .name h1{
+        font-size: 2em;
+    }
+
+    .name span{
+        font-size: 1.5em;
+    }
+
+    aside a{
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    header{
+        justify-content: space-around;
+    }
+
+    .menuBtn{
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .links{
+        display: flex;
+        gap: 50px;
+    }
+
+    .links a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5em;
+        transition: color .3s ease;
+        position: relative;
+    }
+
+    .links a:hover{
+        color:#07eeff;
+    }
+
+    .links a:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+
+        width: 100%;
+        height: 2px;
+        background-color: #07eeff;
+
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform .3s ease;
+    }
+
+    .links a:hover::after{
+        transform: scaleX(1);
+    }
 }

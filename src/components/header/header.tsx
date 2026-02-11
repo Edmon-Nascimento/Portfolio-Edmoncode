@@ -11,7 +11,7 @@ export default function Header(){
         
         <header>
             <div className={`${styles.name} ${isMenuOpen? styles.hideName: ""}`}>
-                <h1 className={styles.logo}>EDMONCODE</h1>
+                <h1>EDMONCODE</h1>
                 <span>Desenvolvedor front-end</span>
             </div>
 
