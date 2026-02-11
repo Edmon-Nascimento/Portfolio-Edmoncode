@@ -1,7 +1,7 @@
 import styles from './header.module.css'
 import menuIcon from '../../assets/images/icons/bars-solid-full.svg'
 import closeIcon from '../../assets/images/icons/x-solid-full.svg'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Header(){
 
@@ -12,7 +12,6 @@ export default function Header(){
         <header>
             <div className={`${styles.name} ${isMenuOpen? styles.hideName: ""}`}>
                 <h1>EDMONCODE</h1>
-                <span>Desenvolvedor front-end</span>
             </div>
 
             {/* Menu mobile */}

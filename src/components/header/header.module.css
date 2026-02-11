@@ -64,12 +64,21 @@ img.inactive{
     pointer-events: auto;
 }
 
-aside{
-    background-color: rgba(127, 246, 255, 0.35);
-    backdrop-filter: blur(10px);
+aside {
+    background: linear-gradient(
+        180deg,
+        rgba(127, 246, 255, 0.18) 0%,
+        rgba(20, 25, 40, 0.85) 100%
+    );
 
-    width: 50vw;
-    height: 100dvh;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-left: 1px solid rgba(127, 246, 255, 0.25);
+
+    width: 75vw;
+    max-width: 380px;
+    height: 100vh;
 
     position: fixed;
     right: 0;
@@ -80,35 +89,67 @@ aside{
     opacity: 0;
     pointer-events: none;
 
-    transition: transform .4s ease, opacity .3s ease;
+    padding: 60px 30px;
+
+    box-shadow:
+        -10px 0 40px rgba(127, 246, 255, 0.25);
+
+    transition: transform .45s cubic-bezier(.77,0,.18,1),
+                opacity .3s ease;
 }
 
-aside.active{
+aside.active {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
 
     display: flex;
-    flex-flow: column;
-    gap: 30px;
-    padding-left: 20px;
+    flex-direction: column;
+    gap: 40px;
 }
 
-aside .menuBtn{
-    margin-top: 60px;
+aside .menuBtn {
     width: 50px;
+    margin-bottom: 40px;
 }
-
-aside a{
+aside a {
+    position: relative;
     text-decoration: none;
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: color .3s ease, transform .3s ease;
 }
 
-aside a:first-child{
-    margin-top: 100px;
+aside a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #7ff6ff;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
 }
+
+aside a:active {
+    transform: translateX(5px);
+}
+
+aside a:hover {
+    color: #7ff6ff;
+}
+
+aside a:hover::after {
+    transform: scaleX(1);
+}
+
 
 @media screen and (min-width:768px) {
     header{
