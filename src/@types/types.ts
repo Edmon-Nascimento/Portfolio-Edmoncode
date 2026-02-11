@@ -24,4 +24,11 @@ export type Contact = {
   phone: Phone
 }
 
+export type Skills = {
+  id: number
+  title: string
+  image: string
+  alt: string
+}
+
 

@@ -1,6 +1,7 @@
 import styles from './home.module.css'
 import profile from '../assets/images/profile.png'
 import cv from '../assets/doc/Currículo - Edmon Nascimento.pdf'
+import { skills } from '../data/skillsdata'
 
 export default function Home(){
     return(
@@ -32,8 +33,14 @@ export default function Home(){
                 </div>
             
             </div>   
-            
-             
+
+            <h2>Habilidades</h2>
+            <div className={styles.skills}>
+                {skills.map((skill)=>(
+                    <div className={styles.skillcard} key={skill.id}><img src={skill.image} alt={skill.alt} /></div>
+                ))}
+            </div>
+
         </main>
     )
 }

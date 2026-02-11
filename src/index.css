@@ -8,8 +8,6 @@
 
 body{
     height: 100%;
-    display: flex;
-    flex-flow: column;
     font-family: "Raleway", Arial, Helvetica ,sans-serif;
     background: linear-gradient(
         135deg,

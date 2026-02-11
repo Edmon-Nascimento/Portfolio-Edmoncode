@@ -109,6 +109,19 @@ main {
     line-height: 150%;
 }
 
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skillcard img{
+    width: 80px;
+}
+
 
 @media screen and (min-width:768px) {
 
@@ -150,8 +163,7 @@ main {
         display: flex;
         flex-flow: row-reverse;
         align-items: center;
-        justify-content: center;
-        gap: 120px;
+        gap: 200px;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -208,5 +220,13 @@ main {
 
     .sobre p + p{
         opacity: 0.85;
+    }
+
+    .downloadcv {
+        padding: 20px 45px;
+    }
+
+    .downloadcv a{
+        font-size: 1.3rem;
     }
 }

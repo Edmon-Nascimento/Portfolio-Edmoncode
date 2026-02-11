@@ -1,6 +1,6 @@
 import styles from './header.module.css'
-import menuIcon from '../../assets/images/icons/bars-solid-full.svg'
-import closeIcon from '../../assets/images/icons/x-solid-full.svg'
+import menuIcon from '../../../public/icons/bars-solid-full.svg'
+import closeIcon from '../../../public/icons/x-solid-full.svg'
 import { useState } from 'react'
 
 export default function Header(){
