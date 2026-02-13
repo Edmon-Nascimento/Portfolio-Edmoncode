@@ -1,15 +1,6 @@
 export const contacts = [
   {
     id: 1,
-    type: "instagram",
-    label: "Instagram",
-    value: "@edmoncode",
-    url: "https://instagram.com/edmoncode",
-    icon: "./src/assets/images/social/instagram-brands-solid-full.svg",
-    alt: "Instagram icon"
-  },
-  {
-    id: 2,
     type: "linkedin",
     label: "LinkedIn",
     value: "Edmon Nascimento",
@@ -18,7 +9,7 @@ export const contacts = [
     alt: "LinkedIn icon"
   },
   {
-    id: 3,
+    id: 2,
     type: "github",
     label: "GitHub",
     value: "Edmon-Nascimento",
@@ -27,7 +18,7 @@ export const contacts = [
     alt: "GitHub icon"
   },
   {
-    id: 4,
+    id: 3,
     type: "email",
     label: "Email",
     value: "edmoncode7@gmail.com",
@@ -36,7 +27,7 @@ export const contacts = [
     alt: "Email icon"
   },
   {
-    id: 5,
+    id: 4,
     type: "whatsapp",
     label: "WhatsApp",
     value: "(71) 92003-0489",

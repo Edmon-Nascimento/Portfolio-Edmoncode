@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap');
 @import "tailwindcss";
-
-/* DESIGN TOKENS */
-
-:root {
-  --color-bg-primary: #1C1B2A;
-  --color-bg-secondary: #25243A;
-  --color-bg-tertiary: #2F2E4D;
-
-  --color-accent: #7FF7FF;
-  --color-accent-soft: rgba(127, 247, 255, 0.15);
-
-  --color-text-primary: #F5F7FF;
-  --color-text-secondary: #B8C0FF;
-  --color-border-soft: rgba(255, 255, 255, 0.08);
+@theme {
+  /* Cores customizadas */
+  --color-primary: #1c1b2a;
+  --color-primary-dark: #14131f;
+  --color-accent: #7ff7ff;
+  --color-accent-dim: rgba(127, 247, 255, 0.8);
+  --color-accent-muted: rgba(127, 247, 255, 0.5);
+  --color-accent-subtle: rgba(127, 247, 255, 0.15);
 }
 
-/* RESET MODERNO */
+/* Variáveis CSS globais */
+:root {
+  --color-primary: #1c1b2a;
+  --color-accent: #7ff7ff;
+  --color-text: #e8e8e8;
+  --color-text-muted: #a0a0a0;
+  --color-bg: #1c1b2a;
+  --color-surface: #252438;
+  --color-border: rgba(127, 247, 255, 0.2);
+}
 
+/* Reset e estilos base */
 *,
 *::before,
 *::after {
@@ -29,104 +32,68 @@ html {
 }
 
 body {
-  min-height: 100vh;
   margin: 0;
-
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  color: var(--color-text-primary);
-
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(127, 247, 255, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(127, 247, 255, 0.05),
-      transparent 40%
-    ),
-    linear-gradient(
-      135deg,
-      var(--color-bg-primary) 0%,
-      var(--color-bg-secondary) 45%,
-      var(--color-bg-tertiary) 100%
-    );
-
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* TIPOGRAFIA */
-
+/* Tipografia */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-  letter-spacing: -0.5px;
+  color: var(--color-text);
+  line-height: 1.2;
+  font-weight: 600;
 }
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: var(--color-accent); }
+h3 { font-size: 1.25rem; }
+h4, h5, h6 { font-size: 1rem; }
 
 p {
-  color: var(--color-text-secondary);
-  line-height: 1.7;
+  color: var(--color-text-muted);
 }
 
-/* SELEÇÃO DE TEXTO */
-
-::selection {
-  background: var(--color-accent);
-  color: var(--color-bg-primary);
-}
-
-/* SCROLLBAR CUSTOM */
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to bottom,
-    rgba(127, 247, 255, 0.6),
-    rgba(127, 247, 255, 0.3)
-  );
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
-}
-
-/* UTILIDADES GLOBAIS */
-
-.glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border-soft);
-  border-radius: 16px;
-}
-
-.neon-border {
-  border: 1px solid rgba(127, 247, 255, 0.4);
-  box-shadow:
-    0 0 10px rgba(127, 247, 255, 0.2),
-    0 0 30px rgba(127, 247, 255, 0.1);
-}
-
-.neon-text {
+nav a {
   color: var(--color-accent);
-  text-shadow: 0 0 8px rgba(127, 247, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.fade-in {
-  animation: fadeIn 0.8s ease forwards;
-  opacity: 0;
+/* Botões e elementos interativos */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilitários de cor */
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
 }
