@@ -1,18 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap');
+@import "tailwindcss";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* DESIGN TOKENS */
+
+:root {
+  --color-bg-primary: #1C1B2A;
+  --color-bg-secondary: #25243A;
+  --color-bg-tertiary: #2F2E4D;
+
+  --color-accent: #7FF7FF;
+  --color-accent-soft: rgba(127, 247, 255, 0.15);
+
+  --color-text-primary: #F5F7FF;
+  --color-text-secondary: #B8C0FF;
+  --color-border-soft: rgba(255, 255, 255, 0.08);
 }
 
-body{
-    height: 100%;
-    font-family: "Raleway", Arial, Helvetica ,sans-serif;
-    background: linear-gradient(
-        135deg,
-        #1C1B2A 0%,
-        #25243A 45%,
-        #2F2E4D 100%
+/* RESET MODERNO */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: var(--color-text-primary);
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(127, 247, 255, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(127, 247, 255, 0.05),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-bg-primary) 0%,
+      var(--color-bg-secondary) 45%,
+      var(--color-bg-tertiary) 100%
     );
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* TIPOGRAFIA */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* SELEÇÃO DE TEXTO */
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+
+/* SCROLLBAR CUSTOM */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(127, 247, 255, 0.6),
+    rgba(127, 247, 255, 0.3)
+  );
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* UTILIDADES GLOBAIS */
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 16px;
+}
+
+.neon-border {
+  border: 1px solid rgba(127, 247, 255, 0.4);
+  box-shadow:
+    0 0 10px rgba(127, 247, 255, 0.2),
+    0 0 30px rgba(127, 247, 255, 0.1);
+}
+
+.neon-text {
+  color: var(--color-accent);
+  text-shadow: 0 0 8px rgba(127, 247, 255, 0.6);
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

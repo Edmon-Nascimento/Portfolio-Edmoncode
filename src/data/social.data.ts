@@ -1,10 +1,47 @@
-export const contacts = {
-  instagram: "https://instagram.com/edmoncode",
-  linkedin: "https://www.linkedin.com/in/edmon-nascimento/",
-  github: "https://github.com/Edmon-Nascimento",
-  email: "edmoncode7@gmail.com",
-  phone: {
-    raw: "(71) 92003-0489",
-    international: "+5571920030489",
+export const contacts = [
+  {
+    id: 1,
+    type: "instagram",
+    label: "Instagram",
+    value: "@edmoncode",
+    url: "https://instagram.com/edmoncode",
+    icon: "./src/assets/images/social/instagram-brands-solid-full.svg",
+    alt: "Instagram icon"
   },
-};
+  {
+    id: 2,
+    type: "linkedin",
+    label: "LinkedIn",
+    value: "Edmon Nascimento",
+    url: "https://www.linkedin.com/in/edmon-nascimento/",
+    icon: "./src/assets/images/social/linkedin-brands-solid-full.svg",
+    alt: "LinkedIn icon"
+  },
+  {
+    id: 3,
+    type: "github",
+    label: "GitHub",
+    value: "Edmon-Nascimento",
+    url: "https://github.com/Edmon-Nascimento",
+    icon: "./src/assets/images/social/github-brands-solid-full.svg",
+    alt: "GitHub icon"
+  },
+  {
+    id: 4,
+    type: "email",
+    label: "Email",
+    value: "edmoncode7@gmail.com",
+    url: "mailto:edmoncode7@gmail.com",
+    icon: "./src/assets/images/social/envelope-solid-full.svg",
+    alt: "Email icon"
+  },
+  {
+    id: 5,
+    type: "whatsapp",
+    label: "WhatsApp",
+    value: "(71) 92003-0489",
+    url: "https://wa.me/5571920030489",
+    icon: "./src/assets/images/social/whatsapp-brands-solid-full.svg",
+    alt: "WhatsApp icon"
+  }
+];

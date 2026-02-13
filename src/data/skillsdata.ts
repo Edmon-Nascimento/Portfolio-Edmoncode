@@ -13,38 +13,44 @@ export const skills = [
   },
   {
     id: 3,
+    title: "Tailwind CSS",
+    image: "./src/assets/images/skills/tailwind-css-brands-solid-full.svg",
+    alt: "Tailwind CSS icon"
+  },
+  {
+    id: 4,
     title: "JavaScript",
     image: "./src/assets/images/skills/js-brands-solid-full.svg",
     alt: "JavaScript icon"
   },
   {
-    id: 4,
+    id: 5,
     title: "TypeScript",
     image: "./src/assets/images/skills/typescript.png",
     alt: "TypeScript icon"
   },
   {
-    id: 5,
+    id: 6,
     title: "React",
     image: "./src/assets/images/skills/react-brands-solid-full.svg",
     alt: "React icon"
   },
   {
-    id: 6,
+    id: 7,
     title: "Firebase",
     image: "./src/assets/images/skills/firebase.png",
     alt: "Firebase icon"
   },
   {
-    id: 7,
+    id: 8,
     title: "Figma",
     image: "./src/assets/images/skills/figma-brands-solid-full.svg",
     alt: "Figma icon"
   },
   {
-    id: 8,
+    id: 9,
     title: "WordPress",
-    image:"./src/assets/images/skills/html5-brands-solid-full.svg",
+    image: "./src/assets/images/skills/wordpress-brands-solid-full.svg",
     alt: "WordPress icon"
   }
-]
+];

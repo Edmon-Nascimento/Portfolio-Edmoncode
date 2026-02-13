@@ -1,6 +1,8 @@
 import profile from '../assets/images/profile.png'
 import cv from '../assets/doc/Currículo - Edmon Nascimento.pdf'
 import { skills } from '../data/skillsdata'
+import { projects } from '../data/projects.data'
+import { contacts } from '../data/social.data'
 
 export default function Home(){
     return(
@@ -39,6 +41,24 @@ export default function Home(){
                 {skills.map((skill)=>(
                     <div key={skill.id}>
                         <img src={skill.image} alt={skill.alt} />
+                    </div>
+                ))}
+            </div>
+
+            <h2>Projetos</h2>
+            <div>
+                {projects.map((project)=>(
+                    <div key={project.id}>
+                        <img src={project.coverImage} alt={project.title} />
+                    </div>
+                ))}
+            </div>
+
+            <h2>Contato</h2>
+            <div>
+                {contacts.map((contact)=>(
+                    <div key={contact.id}>
+                        <img src={contact.icon} alt="" />
                     </div>
                 ))}
             </div>
