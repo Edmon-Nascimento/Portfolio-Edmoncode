@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Plataforma para visualizar e filtrar vagas de tecnologia de forma organizada e acessível.",
     tags: ["React", "TypeScript", "API"],
-    coverImage: "/images/projects/techradar-bg.png",
+    coverImage: "./src/assets/images/projects/techradar-bg.png",
     alt: "Tela inicial da aplicação TechRadar com listagem de vagas tech",
     liveUrl: "https://techradar-jobs.vercel.app/",
     githubUrl: "https://github.com/Edmon-Nascimento/TechRadar-Radar-de-vagas-tech",
@@ -18,7 +18,7 @@ export const projects = [
     description:
       "Dashboard para acompanhamento do mercado de criptomoedas com dados atualizados em tempo real.",
     tags: ["React", "TypeScript", "API", "Finanças"],
-    coverImage: "/images/projects/satoshiview-bg.png",
+    coverImage: "./src/assets/images/projects/satoshiview-bg.png",
     alt: "Dashboard de criptomoedas exibindo preços e variações",
     liveUrl: "https://satoshiview.vercel.app/",
     githubUrl: "https://github.com/Edmon-Nascimento/SatoshiView-Crypto-Market-Tracker",
@@ -31,11 +31,11 @@ export const projects = [
     description:
       "Interface para descoberta de filmes e séries, simulando uma plataforma de streaming.",
     tags: ["React", "TypeScript", "UI", "API"],
-    coverImage: "/images/projects/teladupla-bg.png",
+    coverImage: "./src/assets/images/projects/teladupla-bg.png",
     alt: "Interface da aplicação TelaDupla com catálogo de filmes",
     liveUrl: "https://teladupla.vercel.app/",
     githubUrl: "https://github.com/Edmon-Nascimento/TelaDupla-Cinema-Streaming",
-    featured: false,
+    featured: true,
     status: "emAndamento",
   },
   {
@@ -44,7 +44,7 @@ export const projects = [
     description:
       "Site institucional para escritório de advocacia, com foco em credibilidade e apresentação profissional.",
     tags: ["WordPress", "UI"],
-    coverImage: "/images/projects/goadvocacia-bg.png",
+    coverImage: "./src/assets/images/projects/goadvocacia-bg.png",
     alt: "Site institucional do escritório GO Advocacia",
     liveUrl: "https://advgabrieloliveira.com/",
     githubUrl: "https://github.com/Edmon-Nascimento/go-advocacia-site",
@@ -57,7 +57,7 @@ export const projects = [
     description:
       "Formulário de confirmação de presença para o meu casamento, com foco em simplicidade e usabilidade.",
     tags: ["JavaScript", "Forms", "UX"],
-    coverImage: "/images/projects/wedding-bg.png",
+    coverImage: "./src/assets/images/projects/wedding-bg.png",
     alt: "Formulário de confirmação de presença para casamento",
     liveUrl: "https://wedding-attendance-form.vercel.app/",
     githubUrl: "https://github.com/Edmon-Nascimento/Wedding-attendance-form",

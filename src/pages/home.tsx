@@ -1,4 +1,3 @@
-import styles from './home.module.css'
 import profile from '../assets/images/profile.png'
 import cv from '../assets/doc/Currículo - Edmon Nascimento.pdf'
 import { skills } from '../data/skillsdata'
@@ -6,23 +5,24 @@ import { skills } from '../data/skillsdata'
 export default function Home(){
     return(
         <main>
-            <div className={styles.profilecontainer}>
+            <div>
                 <div>
-                    <div className={styles.profile}>
+                    <div>
                         <img src={profile} alt="Edmon Nascimento - Desenvolvedor front-end" />
-                        <div className={styles.name}>
+                        <div>
                             <h2>Edmon Nascimento</h2>
                             <p>Desenvolvedor front-end</p>
                         </div>
                     </div>
                     
-                    <div className={styles.cv}>
-                        <button className={styles.downloadcv}><a href={cv}>Baixar CV</a>
+                    <div>
+                        <button>
+                            <a href={cv}>Baixar CV</a>
                         </button>
                     </div>
                 </div>
 
-                <div className={styles.sobre}>
+                <div>
                     <p>Desenvolvedor Front-end focado em criar interfaces modernas, acessíveis e performáticas, com código limpo, organizado e escalável.</p>
 
                     <p>Atuo principalmente com JavaScript, TypeScript e React, aplicando boas práticas de componentização, semântica e organização de projetos.</p>
@@ -35,9 +35,11 @@ export default function Home(){
             </div>   
 
             <h2>Habilidades</h2>
-            <div className={styles.skills}>
+            <div>
                 {skills.map((skill)=>(
-                    <div className={styles.skillcard} key={skill.id}><img src={skill.image} alt={skill.alt} /></div>
+                    <div key={skill.id}>
+                        <img src={skill.image} alt={skill.alt} />
+                    </div>
                 ))}
             </div>
 

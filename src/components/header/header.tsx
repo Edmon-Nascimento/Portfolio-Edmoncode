@@ -1,6 +1,5 @@
-import styles from './header.module.css'
-import menuIcon from '../../../public/icons/bars-solid-full.svg'
-import closeIcon from '../../../public/icons/x-solid-full.svg'
+import menuIcon from '../../assets/images/icons/bars-solid-full.svg'
+import closeIcon from '../../assets/images/icons/x-solid-full.svg'
 import { useState } from 'react'
 
 export default function Header(){
@@ -10,37 +9,29 @@ export default function Header(){
     return(
         
         <header>
-            <div className={`${styles.name} ${isMenuOpen? styles.hideName: ""}`}>
+            <div>
                 <h1>EDMONCODE</h1>
             </div>
 
             {/* Menu mobile */}
 
             <button 
-                className={styles.menuBtn} 
                 aria-label='abrir menu de navegação' 
                 aria-expanded={isMenuOpen} 
                 aria-controls='mobile-menu'
                 onClick={()=>setIsMenuOpen(true)}
-                >
-                <img 
-                    src={menuIcon} 
-                    className={isMenuOpen? styles.inactive : styles.active}
-                />
+            >
+                <img src={menuIcon} />
             </button>
 
             <aside 
                 id='mobile-menu'
-                className={isMenuOpen? styles.active: ""}
             >
                 <button
-                    className={styles.menuBtn}
                     aria-label='fechar menu de navegação'
                     onClick={()=>setIsMenuOpen(false)}
                 >
-                    <img 
-                        src={closeIcon} 
-                    />
+                    <img src={closeIcon} />
                 </button>
                 <a href="">Sobre</a>
                 <a href="">Habilidades</a>
@@ -48,16 +39,11 @@ export default function Header(){
                 <a href="">Contato</a>
             </aside>
 
-            <div 
-                className={`${styles.overlay} ${isMenuOpen? styles.active : ""}`} onClick={()=>setIsMenuOpen(false)}
-            >
+            <div onClick={()=>setIsMenuOpen(false)}>
             </div>
 
-
             {/* Menu desktop */}            
-            <nav 
-                className={styles.links}
-            >
+            <nav>
                 <a href="">Sobre</a>
                 <a href="">Habilidades</a>
                 <a href="">Projetos</a>
