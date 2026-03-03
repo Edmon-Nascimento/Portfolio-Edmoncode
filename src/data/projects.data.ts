@@ -24,7 +24,7 @@ export const projects = [
     title: "SatoshiView",
     description:
       "Dashboard para acompanhamento do mercado de criptomoedas com dados atualizados em tempo real.",
-    tags: ["React", "TypeScript", "API", "Finanças"],
+    tags: ["React", "TypeScript", "API"],
     coverImage: satoshiviewBg,
     alt: "Dashboard de criptomoedas exibindo preços e variações",
     liveUrl: "https://satoshiview.vercel.app/",
@@ -38,7 +38,7 @@ export const projects = [
     title: "TelaDupla",
     description:
       "Interface para descoberta de filmes e séries, simulando uma plataforma de streaming.",
-    tags: ["React", "TypeScript", "UI", "API"],
+    tags: ["React", "TypeScript", "API"],
     coverImage: teladuplaBg,
     alt: "Interface da aplicação TelaDupla com catálogo de filmes",
     liveUrl: "https://teladupla.vercel.app/",
@@ -52,12 +52,10 @@ export const projects = [
     title: "GO Advocacia e Consultoria Jurídica",
     description:
       "Site institucional para escritório de advocacia, com foco em credibilidade e apresentação profissional.",
-    tags: ["WordPress", "UI"],
+    tags: ["WordPress"],
     coverImage: goadvocaciaBg,
     alt: "Site institucional do escritório GO Advocacia",
     liveUrl: "https://advgabrieloliveira.com/",
-    githubUrl:
-      "https://github.com/Edmon-Nascimento/go-advocacia-site",
     featured: false,
     status: "finalizado",
   },
@@ -66,7 +64,7 @@ export const projects = [
     title: "Wedding Attendance Form",
     description:
       "Formulário de confirmação de presença para o meu casamento, com foco em simplicidade e usabilidade.",
-    tags: ["JavaScript", "Forms", "UX"],
+    tags: ["JavaScript"],
     coverImage: weddingBg,
     alt: "Formulário de confirmação de presença para casamento",
     liveUrl: "https://wedding-attendance-form.vercel.app/",
