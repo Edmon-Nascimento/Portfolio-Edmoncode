@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import download from '../assets/images/icons/download.svg'
+import person from '../assets/images/icons/person.svg'
 import profile from '../assets/images/profile.png'
 import cv from '../assets/doc/Currículo - Edmon Nascimento.pdf'
 import { skills } from '../data/skillsdata'
@@ -11,43 +13,67 @@ export default function Home(){
     return(
         <main className="min-h-screen">
             {/* Hero / Sobre */}
-            <section id="sobre" className="px-6 py-16 sm:px-8 sm:py-24 max-w-5xl mx-auto">
-                <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
-                    <div className="flex flex-col items-center sm:flex-row sm:items-center md:flex-col md:items-center gap-6 lg:flex-col lg:shrink-0 lg:w-64">
-                        <div className="shrink-0 overflow-hidden rounded-full w-52 h-52 sm:w-64 sm:h-64 ring-2 ring-[#7ff7ff]/30 shadow-lg">
+
+            <section id="sobre" className="px-6 py-16 w-full h-screen
+                    px-8 py-24 
+                    lg:flex lg:flex-col lg:justify-center
+                ">
+
+                <div className="flex flex-col gap-12 w-full 
+                lg:flex-row lg:justify-around">
+
+                    <div className="flex 
+                    flex-col 
+                    items-center
+                   
+
+                    lg:flex-row 
+                    lg:justify-around
+                    lg:w-full" >
+
+                        <div className="overflow-hidden rounded-full ring-3  ring-[#7ff7ff]/30 shadow-lg
+                        w-64 h-64 
+                        mb-4
+                        md:h-100 md:w-100
+                        lg:w-120 lg:h-120">
                             <img 
                                 src={profile} 
                                 alt="Edmon Nascimento - Desenvolvedor front-end" 
                                 className="w-full h-full object-cover object-center"
                             />
                         </div>
-                        <div className="text-center sm:text-left md:text-center lg:text-center">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">Edmon Nascimento</h2>
-                            <p className="text-[#7ff7ff] font-medium text-lg md:text-xl">Desenvolvedor front-end</p>
+
+                        
+                        <div className="text-center lg:text-left">
+                            <h2 className="text-2xl font-bold text-white mb-1
+                                        md:text-5xl
+                                        lg:text-6xl
+                            ">Edmon Nascimento</h2>
+                            <p className="text-[#7ff7ff] font-medium text-lg md:text-3xl">Desenvolvedor front-end</p>
+
+                            <p className='md:w-xl'>Construo interfaces modernas, acessíveis e performáticas, com código limpo, organizado e escalável. 
+                            </p>
+                            
                             <a 
                                 href={cv} 
                                 download 
-                                className="inline-flex items-center justify-center mt-6 px-6 py-3 md:px-8 md:py-4 rounded-lg bg-[#7ff7ff] text-[#1c1b2a] text-base md:text-lg font-semibold hover:bg-[#7ff7ff]/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7ff7ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1b2a]"
+                                className="inline-flex items-center justify-center mt-6 px-6 py-3 md:px-8 md:py-4 rounded-lg bg-[#7ff6ffb4] text-[#1c1b2a] text-base md:text-lg font-semibold hover:bg-[#7ff7ff]/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7ff7ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1b2a]"
                             >
+                                <img className='mr-2' src={download}/>
                                 Baixar CV
                             </a>
-                        </div>
-                    </div>
 
-                    <div className="flex-1 min-w-0 space-y-4 md:space-y-5 p-6 md:p-8 rounded-xl border border-[#7ff7ff]/20 shadow-lg shadow-black/30">
-                        <p className="text-[#a0a0a0] text-base md:text-lg leading-relaxed text-justify">
-                            Desenvolvedor Front-end focado em criar interfaces modernas, acessíveis e performáticas, com código limpo, organizado e escalável.
-                        </p>
-                        <p className="text-[#a0a0a0] text-base md:text-lg leading-relaxed text-justify">
-                            Atuo principalmente com JavaScript, TypeScript e React, aplicando boas práticas de componentização, semântica e organização de projetos.
-                        </p>
-                        <p className="text-[#a0a0a0] text-base md:text-lg leading-relaxed text-justify">
-                            Em constante evolução, estudo arquitetura e padrões de mercado para me tornar Fullstack, valorizando consistência e prática contínua.
-                        </p>
-                        <p className="text-[#a0a0a0] text-base md:text-lg leading-relaxed text-justify">
-                            Busco criar soluções que gerem impacto real e entreguem valor para quem utiliza.
-                        </p>
-                    </div>
+                            <a 
+                                href="#contato" 
+                                className="inline-flex items-center justify-center mt-6 px-6 py-3 md:px-8 md:py-4 rounded-lg  text-[#7ff7ff] text-base md:text-lg font-semibold  border-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7ff7ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1b2a] ml-2"
+                            >
+                                <img className='mr-2' src={person}/>
+                                Contato
+                            </a>
+                        </div>
+                        
+
+                    </div>                   
                 </div>
             </section>
 
