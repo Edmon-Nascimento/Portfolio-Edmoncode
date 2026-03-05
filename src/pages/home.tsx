@@ -5,72 +5,84 @@ import { projects } from "../data/projects.data";
 import { contacts } from "../data/social.data";
 import ProjectModal from "../components/modal/modal";
 import type { Project } from "../components/modal/modal";
+import { motion } from "framer-motion";
+
+const slideLeft = {
+  hidden: { opacity: 0, x: -120 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8 }
+  }
+};
+
+const slideRight = {
+  hidden: { opacity: 0, x: 120 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8 }
+  }
+};
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <main className="min-h-screen">
-      <Hero/>
+
+      <Hero />
 
       {/* Habilidades */}
-      <section
+      <motion.section
         id="habilidades"
-        className="px-6 py-16  bg-[#252438]/50 border-y border-accent/10
-                            sm:px-8 sm:py-24 "
+        className="px-6 py-16 bg-[#252438]/50 border-y border-accent/10 sm:px-8 sm:py-24"
+        variants={slideLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
       >
         <div className="px-20 py-20 text-center">
-          <h2
-            className="text-2xl font-bold text-accent mb-10
-                                    md:text-3xl
-                                    lg:text-4xl"
-          >
+          <h2 className="text-2xl font-bold text-accent mb-10 md:text-3xl lg:text-4xl">
             Habilidades
           </h2>
 
-          <div
-            className="flex flex-col gap-6 max-w-6xl w-full m-auto items-center
-                                    md:grid md:grid-cols-3 
-                                    lg:grid-cols-6"
-          >
+          <div className="flex flex-col gap-6 max-w-6xl w-full m-auto items-center md:grid md:grid-cols-3 lg:grid-cols-6">
             {skills.map((skill) => (
               <div
                 key={skill.id}
                 className="flex flex-col items-center gap-2 p-4 rounded-xl bg-text-primary/80 border border-accent/10 w-35
-                                hover:border-accent/30 hover:bg-accent/5  hover:shadow-accent/30 hover:shadow-2xl transition-all duration-300 group"
+                hover:border-accent/30 hover:bg-accent/5 hover:shadow-accent/30 hover:shadow-2xl transition-all duration-300 group"
               >
                 <img
                   src={skill.image}
                   alt={skill.alt}
                   className="w-15 object-contain transition-transform group-hover:scale-110"
                 />
-                <span
-                  className="text-sm text-[#e8e8e8] font-medium text-center
-                                                md:text-base"
-                >
+                <span className="text-sm text-[#e8e8e8] font-medium text-center md:text-base">
                   {skill.title}
                 </span>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Projetos */}
-      <section id="projetos" className="px-10 py-16 sm:px-8 sm:py-24 ">
+      <motion.section
+        id="projetos"
+        className="px-10 py-16 sm:px-8 sm:py-24"
+        variants={slideRight}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+      >
         <div className="px-20 text-center">
-          <h2
-            className="text-2xl font-bold text-accent mb-10
-                                    md:text-3xl
-                                    lg:text-4xl"
-          >
+          <h2 className="text-2xl font-bold text-accent mb-10 md:text-3xl lg:text-4xl">
             Projetos
           </h2>
 
-          <div
-            className="grid gap-6 sm:grid-cols-2 items-start
-                                    lg:grid-cols-3
-                        "
-          >
+          <div className="grid gap-6 sm:grid-cols-2 items-start lg:grid-cols-3">
             {projects.map((project) => (
               <article
                 key={project.id}
@@ -88,10 +100,12 @@ export default function Home() {
                     aria-hidden="true"
                   />
                 </div>
+
                 <div className="flex flex-col p-4 sm:p-5">
                   <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-3 text-left">
                     {project.title}
                   </h3>
+
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                       <span
@@ -107,26 +121,29 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contato */}
-      <section
+      <motion.section
         id="contato"
         className="px-6 py-16 sm:px-8 sm:py-24 bg-[#252438]/50 border-t border-accent/10"
+        variants={slideLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
       >
         <div className="max-w-5xl mx-auto text-center py-20">
           <h2 className="text-2xl md:text-3xl font-bold text-accent mb-10 lg:text-4xl">
             Contato
           </h2>
+
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
             {contacts.map((contact) => (
               <a
                 key={contact.id}
                 href={contact.url}
                 target={contact.type === "email" ? undefined : "_blank"}
-                rel={
-                  contact.type === "email" ? undefined : "noopener noreferrer"
-                }
+                rel={contact.type === "email" ? undefined : "noopener noreferrer"}
                 className="flex flex-col items-center gap-3 p-5 rounded-xl bg-text-primary/80 border border-accent/10 hover:border-accent/40 hover:bg-accent/5 transition-all duration-200 group min-w-50"
               >
                 <img
@@ -134,6 +151,7 @@ export default function Home() {
                   alt={contact.alt}
                   className="w-10 h-10 md:w-12 md:h-12 object-contain text-accent transition-transform group-hover:scale-110"
                 />
+
                 <span className="text-sm md:text-base text-[#e8e8e8] font-medium">
                   {contact.label}
                 </span>
@@ -141,7 +159,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
+
       <ProjectModal
         isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)}
