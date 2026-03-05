@@ -18,15 +18,16 @@ export default function Hero() {
         {/* Foto */}
         <div className="flex justify-center">
           <div
-            className="flex shrink glass-profile overflow-hidden rounded-full bg-black/80 ring-accent/30 shadow-lg
+            className="flex shrink glass-profile overflow-hidden rounded-full
                        w-64 h-64 mb-4
                        md:h-80 md:w-80
                        lg:w-100 lg:h-100"
             tabIndex={0}
           >
-            <img
+            <img 
               src={profile}
               alt="Edmon Nascimento - Desenvolvedor front-end"
+              className="bg-black/20 shadow-lg"
             />
           </div>
         </div>
