@@ -13,7 +13,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 flex items-center justify-between py-5 px-6 sm:px-8 bg-primary/95 backdrop-blur-md border-b border-accent/10">
+    <header className="sticky top-0 z-40 flex items-center justify-between py-5 px-6 sm:px-8 bg-primary/70 backdrop-blur-md border-b border-accent/10">
       <a
         href="#"
         className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded"
