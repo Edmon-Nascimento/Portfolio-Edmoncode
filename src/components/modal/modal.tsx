@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-type Project = {
+export type Project = {
     id: string
     title: string
     description: string
@@ -8,7 +8,7 @@ type Project = {
     coverImage: string
     alt: string
     liveUrl: string
-    githubUrl: string
+    githubUrl?: string
 }
 
 type ProjectModalProps = {
@@ -83,14 +83,16 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                     >
                         Ver projeto
                     </a>
-                    <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-[#7ff7ff]/40 text-[#7ff7ff] font-semibold hover:bg-[#7ff7ff]/10 transition-colors"
-                    >
-                        Repositório
-                    </a>
+                    {project.githubUrl && (
+                        <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-[#7ff7ff]/40 text-[#7ff7ff] font-semibold hover:bg-[#7ff7ff]/10 transition-colors"
+                        >
+                            Repositório
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

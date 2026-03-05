@@ -4,11 +4,10 @@ import { skills } from "../data/skillsdata";
 import { projects } from "../data/projects.data";
 import { contacts } from "../data/social.data";
 import ProjectModal from "../components/modal/modal";
+import type { Project } from "../components/modal/modal";
 
 export default function Home() {
-  const [selectedProject, setSelectedProject] = useState<
-    (typeof projects)[0] | null
-  >(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   return (
     <main className="min-h-screen">
       <Hero/>
