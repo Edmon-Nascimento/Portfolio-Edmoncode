@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme {
   /* Cores customizadas */
   --color-primary: #1c1b2a;
@@ -9,8 +10,27 @@
   --color-accent-subtle: rgba(127, 247, 255, 0.15);
 }
 
-/* Variáveis CSS globais */
+/* Fontes locais */
+@font-face {
+  font-family: "Syne";
+  src: url("./assets/fonts/Syne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jakarta";
+  src: url("./assets/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variáveis globais */
 :root {
+  --font-body: "Jakarta", sans-serif;
+  --font-heading: "Syne", sans-serif;
   --color-primary: #1c1b2a;
   --color-accent: #7ff7ff;
   --color-text: #e8e8e8;
@@ -20,7 +40,7 @@
   --color-border: rgba(127, 247, 255, 0.2);
 }
 
-/* Reset e estilos base */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -36,7 +56,7 @@ body {
   min-height: 100vh;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,27 +64,36 @@ body {
 
 /* Tipografia */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   color: var(--color-text);
   line-height: 1.2;
   font-weight: 600;
 }
 
-h1 { font-size: 2rem; }
-h2 { color: var(--color-accent); }
-h3 { font-size: 1.25rem; }
-h4, h5, h6 { font-size: 1rem; }
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4,h5, h6 { 
+  font-size: 1rem;
+}
 
 p {
   color: var(--color-text-muted);
 }
 
+/* Navegação */
 nav a {
   color: var(--color-accent);
   text-decoration: none;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-/* Botões e elementos interativos */
+/* Botões */
 button {
   cursor: pointer;
   font-family: inherit;
@@ -78,14 +107,14 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* Imagens responsivas */
+/* Imagens */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Utilitários de cor */
+/* Utilitários */
 .text-accent {
   color: var(--color-accent);
 }
